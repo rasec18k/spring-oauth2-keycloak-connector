@@ -1,4 +1,4 @@
-package org.arun.springoauth.config;
+package pe.com.niubiz.config;
 
 import java.util.List;
 import lombok.Getter;

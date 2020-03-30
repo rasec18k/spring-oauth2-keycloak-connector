@@ -3,13 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.arun</groupId>
-  <artifactId>spring-oauth2-keycloak-connector</artifactId>
+  <groupId>org.niubiz</groupId>
+  <artifactId>app.visadirect</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-oauth2-keycloak-connector</name>
-  <description>Demo project for Spring Boot</description>
+  <name>app.visadirect.bo</name>
+  <description>Visadirect Back offices</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -22,6 +22,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
+    <springfox.version>2.9.2</springfox.version>
   </properties>
 
   <dependencies>
@@ -53,6 +54,18 @@
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>${springfox.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>${springfox.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

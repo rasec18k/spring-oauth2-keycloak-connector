@@ -1,4 +1,4 @@
-package org.arun.springoauth.config;
+package pe.com.niubiz.config;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.JwtAccessTokenConverterConfigurer;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -65,10 +64,16 @@ public class JwtAccessTokenCustomizer extends DefaultAccessTokenConverter implem
     OAuth2Request oAuth2Request = authentication.getOAuth2Request();
 
     OAuth2Request request =
-        new OAuth2Request(oAuth2Request.getRequestParameters(), oAuth2Request.getClientId(), authorities, true, oAuth2Request.getScope(),
-            audienceList, null, null, null);
+        new OAuth2Request(oAuth2Request.getRequestParameters(),
+                          oAuth2Request.getClientId(),
+                          authorities, true,
+                          oAuth2Request.getScope(),
+                          audienceList, null,
+                          null, null);
 
     Authentication usernamePasswordAuthentication = new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), "N/A", authorities);
+
+
     LOG.debug("End extractAuthentication");
     return new OAuth2Authentication(request, usernamePasswordAuthentication);
   }

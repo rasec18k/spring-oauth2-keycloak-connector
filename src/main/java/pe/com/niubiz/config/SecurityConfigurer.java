@@ -1,4 +1,4 @@
-package org.arun.springoauth.config;
+package pe.com.niubiz.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

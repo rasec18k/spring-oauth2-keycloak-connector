@@ -1,4 +1,4 @@
-package org.arun.springoauth;
+package pe.com.niubiz;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
-package org.arun.springoauth.config;
+package pe.com.niubiz.config;
 
-import org.arun.springoauth.config.OAuth2RestTemplateConfigurer.ServiceAccountEnabled;
+import pe.com.niubiz.config.OAuth2RestTemplateConfigurer.ServiceAccountEnabled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.AllNestedConditions;
@@ -34,6 +34,7 @@ public class OAuth2RestTemplateConfigurer {
     LOG.debug("Begin OAuth2RestTemplate: getAccessToken");
     /* To validate if required configurations are in place during startup */
     oAuth2RestTemplate.getAccessToken();
+    LOG.debug("***** GET ACCES TOKEN OAuth2RestTemplate: " + oAuth2RestTemplate.getAccessToken());
     LOG.debug("End OAuth2RestTemplate: getAccessToken");
     return oAuth2RestTemplate;
   }

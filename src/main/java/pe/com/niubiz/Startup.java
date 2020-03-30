@@ -1,4 +1,4 @@
-package org.arun.springoauth;
+package pe.com.niubiz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
